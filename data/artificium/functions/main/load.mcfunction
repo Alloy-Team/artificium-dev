@@ -1,5 +1,6 @@
 ## Load Message
-tellraw @a [{"text":">","color":"#8C0000"},{"text":">","color":"#C20000"},{"text":">","color":"#FF0000"},{"text":" Artificium Loaded! ","color":"gray"},{"text":"<","color":"#0000FF"},{"text":"<","color":"#0000CC"},{"text":"<","color":"#0000A3"}]
+tellraw @a[tag=ac_debug] [{"text":"> ","color":"#0000CC"},{"text":"Artificium has reloaded!","color":"gray"}]
+tellraw @a[tag=ac_debug] [{"text":"> ","color":"#0000FF"},{"text":"To remove this message, remove the ac_debug tag from yourself.","color":"gray"}]
 execute as @a at @s run playsound minecraft:item.lodestone_compass.lock master @s ~ ~ ~ 1 0 1
 
 ## Scoreboards

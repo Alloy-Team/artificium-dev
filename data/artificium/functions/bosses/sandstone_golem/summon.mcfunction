@@ -1,1 +1,3 @@
-summon iron_golem ~ ~ ~ {Silent:1b,Invulnerable:1b,Tags:["art.sandstone_golem"],Passengers:[{id:"minecraft:armor_stand",Marker:1b,Invisible:1b,ArmorItems:[{},{},{},{id:"minecraft:iron_nugget",Count:1b,tag:{CustomModelData:170101}}]}],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:999999,ShowParticles:0b}]}
+summon iron_golem ~ ~ ~ {Silent:1b,Health:200f,NoAI:1b,Tags:["art.sandstone_golem","art.inactive_boss"],Passengers:[{id:"minecraft:armor_stand",Marker:1b,Tags:["art.sandstone_golem","art.unlinked"],Invisible:1b,ArmorItems:[{},{},{},{id:"minecraft:iron_nugget",Count:1b,tag:{CustomModelData:170101}}]}],ActiveEffects:[{Id:11b,Amplifier:4b,Duration:999999,ShowParticles:0b},{Id:14b,Amplifier:0b,Duration:999999,ShowParticles:0b}],Attributes:[{Name:generic.max_health,Base:200}]}
+
+execute as @e[distance=...1,type=minecraft:iron_golem,tag=art.sandstone_golem,sort=nearest,limit=1] at @s run function artificium:bosses/sandstone_golem/link

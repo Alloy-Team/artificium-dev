@@ -1,1 +1,1 @@
-give @s item_frame{display:{Name:'{"text":"Coven\'s Cauldron","color":"dark_purple","italic":false,"bold":true}'},CustomModelData:170101,EntityTag:{Item:{id:"minecraft:item_frame",Count:1b,tag:{CustomModelData:170101}},Invisible:1b,Fixed:1b}} 1
+give @s item_frame{display:{Name:'{"text":"Coven\'s Cauldron","color":"dark_purple","italic":false}'},CustomModelData:170101,EntityTag:{Item:{id:"minecraft:item_frame",Count:1b,tag:{CustomModelData:170101}},Invisible:1b,Fixed:1b}} 1

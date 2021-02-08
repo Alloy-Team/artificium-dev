@@ -5,6 +5,7 @@ function artificium:bosses/sandstone_golem/bossbar
 execute if entity @s[tag=art.inactive_boss] run data merge entity @s {NoAI:0b}
 execute if entity @s[tag=art.inactive_boss] run scoreboard players set @s art_gpound 450
 execute if entity @s[tag=art.inactive_boss] run say Activated
+execute if entity @s[tag=art.inactive_boss] run bossbar set minecraft:art_sandstonegolem visible true
 
 execute if entity @s[tag=art.inactive_boss] run tag @s remove art.inactive_boss
 

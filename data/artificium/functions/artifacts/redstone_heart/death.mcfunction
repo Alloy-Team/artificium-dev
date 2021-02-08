@@ -5,4 +5,4 @@ attribute @s minecraft:generic.movement_speed modifier remove 1-7-0-1-1
 attribute @s minecraft:generic.attack_damage modifier remove 1-7-0-1-1
 effect clear @s minecraft:jump_boost
 
-function artificium:artifacts/redstone_heart/give
+function artificium:artifacts/redstone_heart/summon

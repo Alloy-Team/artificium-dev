@@ -1,4 +1,5 @@
 tag @s add art.RedstoneHeart
+playsound minecraft:block.conduit.activate player @a ~ ~ ~ 1 1 0
 
 attribute @s minecraft:generic.movement_speed modifier add 1-7-0-1-1 RH_SpeedBoost 0.04 add
 attribute @s minecraft:generic.attack_damage modifier add 1-7-0-1-1 RH_DamageBoost 3 add

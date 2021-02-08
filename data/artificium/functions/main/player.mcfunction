@@ -4,7 +4,8 @@ execute if entity @s[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{Ar
 
 #RedstoneHeart
 execute if entity @s[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{Artificium:{RedstoneHeart:1b}}}}] if score @s ac_click_cs matches 1.. if score @s art_RHeart matches 0 run function artificium:artifacts/redstone_heart/infuse
-execute if entity @s[tag=art.RedstoneHeart] at @s run particle minecraft:dust 1 0 0 1 ~ ~.95 ~ .15 .45 .15 0 1 force @a[distance=.01..]
+execute if entity @s[tag=art.RedstoneHeart] run particle minecraft:dust 1 0 0 1 ~ ~.95 ~ .15 .45 .15 0 1 force @a[distance=.01..]
+execute if entity @s[tag=art.RedstoneHeart] if score @s ac_death matches 1.. run function artificium:artifacts/redstone_heart/death
 
 
 

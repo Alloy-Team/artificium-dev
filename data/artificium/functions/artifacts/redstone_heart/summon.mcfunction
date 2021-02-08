@@ -1,0 +1,1 @@
+summon item ~ ~ ~ {Item:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{display:{Name:'{"text":"Redstone Heart","color":"dark_red","italic":false}'},HideFlags:127,Unbreakable:1b,CustomModelData:170102,Artificium:{RedstoneHeart:1b}}}}

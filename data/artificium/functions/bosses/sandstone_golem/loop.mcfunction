@@ -6,11 +6,9 @@ execute if entity @s[tag=art.inactive_boss] run data merge entity @s {NoAI:0b}
 execute if entity @s[tag=art.inactive_boss] run scoreboard players set @s art_gpound 150
 execute if entity @s[tag=art.inactive_boss] run say Activated
 execute if entity @s[tag=art.inactive_boss] run bossbar set minecraft:art_sandstonegolem visible true
-
 execute if entity @s[tag=art.inactive_boss] run tag @s remove art.inactive_boss
 
-
-#       Angry
+# Sets target to nearest player in 30 block radius
 execute if entity @p[distance=..30] run data modify entity @s AngryAt set from entity @p[distance=..30] UUID
 
 #Armor stand rotation
@@ -29,6 +27,9 @@ execute if score @s[tag=art.exposed] art_exposedtimer matches 1..20 run say reac
 #Ground Pound
 execute if score @s art_gpound matches 0 run function artificium:bosses/sandstone_golem/stages/ground_pound/start
 execute if score @s art_gpoundAnim matches 1.. run function artificium:bosses/sandstone_golem/stages/ground_pound/attack
+
+#Overclock
+execute if score @s[tag=!art.exposed] art_bossbar matches ..100 run function artificium:bosses/sandstone_golem/stages/overclock/start
 
 #End of Tick
 scoreboard players remove @s[scores={art_exposedtimer=1..}] art_exposedtimer 1

@@ -3,7 +3,7 @@ function artificium:bosses/sandstone_golem/bossbar
 
 # Activate
 execute if entity @s[tag=art.inactive_boss] run data merge entity @s {NoAI:0b}
-execute if entity @s[tag=art.inactive_boss] run scoreboard players set @s art_gpound 450
+execute if entity @s[tag=art.inactive_boss] run scoreboard players set @s art_gpound 150
 execute if entity @s[tag=art.inactive_boss] run say Activated
 execute if entity @s[tag=art.inactive_boss] run bossbar set minecraft:art_sandstonegolem visible true
 
@@ -33,5 +33,5 @@ execute if score @s art_gpoundAnim matches 1.. run function artificium:bosses/sa
 #End of Tick
 scoreboard players remove @s[scores={art_exposedtimer=1..}] art_exposedtimer 1
 
-scoreboard players remove @s[scores={art_gpoundAnim=1..}] art_gpoundAnim 1
+scoreboard players remove @s[scores={art_gpoundAnim=1..},tag=!art.exposed] art_gpoundAnim 1
 execute if entity @p[distance=..5] run scoreboard players remove @s[scores={art_gpound=1..},tag=!art.exposed] art_gpound 1

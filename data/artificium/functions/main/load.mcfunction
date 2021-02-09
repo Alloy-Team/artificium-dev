@@ -22,12 +22,10 @@ scoreboard objectives add art_gpoundAnim dummy
 bossbar add art_coven "The Coven"
 bossbar set art_coven color purple
 bossbar set art_coven max 130
-bossbar set art_coven value 130
 bossbar set art_coven style progress
 
 # Sandstone Golem
 bossbar add art_sandstonegolem "Sandstone Golem"
 bossbar set art_sandstonegolem color red
 bossbar set art_sandstonegolem max 300
-bossbar set art_sandstonegolem value 300
 bossbar set art_sandstonegolem style progress

@@ -22,14 +22,15 @@ execute unless entity @e[type=strider,tag=art.sandstone_golem] unless entity @s[
 
 #Reactivate
 execute if score @s[tag=art.exposed] art_exposedtimer matches 0 run function artificium:bosses/sandstone_golem/stages/reactivate
-execute if score @s[tag=art.exposed] art_exposedtimer matches 1..20 run say reactivating
+execute if score @s[tag=art.exposed] art_exposedtimer matches 1..20 run title @a actionbar "reactivating"
 
 #Ground Pound
 execute if score @s art_gpound matches 0 run function artificium:bosses/sandstone_golem/stages/ground_pound/start
 execute if score @s art_gpoundAnim matches 1.. run function artificium:bosses/sandstone_golem/stages/ground_pound/attack
 
 #Overclock
-execute if score @s[tag=!art.exposed] art_bossbar matches ..100 run function artificium:bosses/sandstone_golem/stages/overclock/start
+execute if score @s[tag=!art.exposed,tag=!art.overclocked] art_bossbar matches ..100 run function artificium:bosses/sandstone_golem/stages/overclock/start
+execute if entity @s[tag=art.overclocked] run particle minecraft:dust 1 0 0 1 ~ ~1.5 ~ .5 1 .5 0 3 force
 
 #End of Tick
 scoreboard players remove @s[scores={art_exposedtimer=1..}] art_exposedtimer 1

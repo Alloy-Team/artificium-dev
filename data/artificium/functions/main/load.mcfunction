@@ -10,6 +10,9 @@ scoreboard objectives add art_bossbar dummy
 #Artifacts
 scoreboard objectives add art_RHeart dummy
 
+scoreboard objectives add art_punchtime dummy
+
+
 #Sandstone Golem
 scoreboard objectives add art_exposedtimer dummy
 scoreboard objectives add art_gpound dummy
